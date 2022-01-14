@@ -1,0 +1,19 @@
+<div class="container" *ngIf="tanks">
+    <div class="row justify-content-center">
+        <app-tank class="col-6 d-flex max-width" *ngFor="let tank of tanks; let i = index" 
+            [tankName]="tank.name" 
+            [tankAvailable]="tank.available"
+            [tankImage]="tank.pictureLink"
+            [tankCountry]="tank.country"
+            [tankGun]="tank.gun"
+            [tankManufacturer]="tank.manufacturer"
+            [tankAmount]="tank.amount"
+            [tankReleaseDate]="tank.releaseDate"
+            [tankRole]="tank.role"
+            [tankHistory]="tank.history"
+            [tankTime]="tank.time"
+
+            [id]="tank.id"></app-tank>
+        </div>
+</div>
+  

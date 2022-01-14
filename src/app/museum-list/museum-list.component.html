@@ -1,0 +1,12 @@
+<div class="container" *ngIf="museums">
+    <div class="row justify-content-center">
+        <app-museum class="col-6 d-flex max-width" *ngFor="let museum of museums; let i = index" 
+            [museumName]="museum.name" 
+            [museumOpeningDate]="museum.openingDate" 
+            [museumLocation]="museum.location" 
+            [museumDescription]="museum.description" 
+            [museumImage]="museum.image"
+
+            [id]="museum.id"></app-museum>
+        </div>
+</div>

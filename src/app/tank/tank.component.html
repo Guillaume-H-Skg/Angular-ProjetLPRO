@@ -1,0 +1,51 @@
+
+
+
+
+  <div class="card shadow-sm flex-fill mt-3">
+    <img class="w-100 h-100 picture" [src]="tankImage">
+
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- <div class="col-12 col-sm-9"> -->
+        <h2>Tank : {{ tankName }}</h2>
+        <!-- </div>
+            <div class="col-12 col-sm-3"> -->
+
+        <div class="onAir" *ngIf="tankAvailable  == true">
+          <small>En exposition : </small><img src="https://cdn-icons-png.flaticon.com/512/152/152597.png">
+        </div>
+        <div class="onAir" *ngIf="tankAvailable  == false">
+          <small>En exposition : </small><img src="https://cdn-icons-png.flaticon.com/512/152/152596.png">
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+
+      <div class="row mx-auto my-2">
+        <div class="col-12 col-sm-6">
+          Mise en service : {{ tankReleaseDate }} <br>
+          Pays : {{tankCountry}}<br>
+          Armenent : {{tankGun}}
+
+        </div>
+        <div class="col-12 col-sm-6">
+          Durée du service : {{tankTime}} années <br>
+          Quantité : {{tankAmount}}<br>
+
+          Fabricant : <cite title="Source Title">{{tankManufacturer}}</cite>
+        </div>
+      </div>
+      <hr />
+      <p class="card-text text-justify">Histore : {{tankHistory}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button [routerLink]="['/modif', id]" type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+          <button type="button" (click)="suppr()" class="btn btn-sm btn-outline-secondary">Supprimer</button>
+        </div>
+        <small class="text-muted">Catégorie : {{tankRole}} </small>
+      </div>
+
+    </div>
+  </div>

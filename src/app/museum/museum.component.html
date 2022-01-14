@@ -1,0 +1,31 @@
+<div class="card shadow-sm flex-fill mt-3">
+    <img class="w-100 h-100 picture" [src]="museumImage">
+
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- <div class="col-12 col-sm-9"> -->
+        <h2>Musée : {{ museumName }}</h2>
+        <!-- </div>
+            <div class="col-12 col-sm-3"> -->
+      </div>
+
+
+      <div class="row mx-auto my-2">
+        <div class="col-12 col-sm-12">
+          Nombre de jours d'ouverture : {{ museumOpeningDate }} <br>
+          Pays : {{museumLocation}}<br>
+
+        </div>
+      </div>
+      <hr />
+      <p class="card-text text-justify">Histore : {{museumDescription}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group mx-auto">
+          <button [routerLink]="['/modifMuseum', id]" type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+          <button type="button" (click)="suppr()" class="btn btn-sm btn-outline-secondary">Supprimer</button>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
