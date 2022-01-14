@@ -104,15 +104,5 @@ export class TankModifComponent implements OnInit {
       }, 3000);
     })
   }
-
-  // modif() {
-  //   this.Tank.update(this.tanks).subscribe(() => {
-  //     this.change = true;
-  //     setTimeout(() => {
-  //       this.change = false;
-  //       this.routeRedirect.navigate(['/tanks']);
-  //     }, 3000);
-  //   })
-  // }
 }
 

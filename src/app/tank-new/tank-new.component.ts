@@ -94,20 +94,9 @@ export class TankNewComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-
-    // console.log(JSON.stringify(this.form.value, null, 2));
     this.Tank.saveNewTank(this.tanks).subscribe(() => {
       this.tanks = new Tank();
       this.router.navigate(['/tanks']);
     })
   }
-
-
-  // add() {
-  //   this.Tank.saveNewTank(this.tanks).subscribe(() => {
-  //     this.tanks = new Tank();
-  //     this.router.navigate(['/tanks']);
-  //   })
-  // }
-
 }

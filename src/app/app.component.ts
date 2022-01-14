@@ -8,7 +8,7 @@ import { interval } from 'rxjs';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  title = 'StonkEshop';
+  title = 'WarMuseum';
   time: number = 0;
 
 

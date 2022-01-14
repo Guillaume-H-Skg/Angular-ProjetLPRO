@@ -3,8 +3,6 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable} from 'rxjs';
 import { Tank } from 'src/app/models/tank.model'
 import { map } from 'rxjs/operators';
-// import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +10,14 @@ import { map } from 'rxjs/operators';
 export class TankService {
   private dbPath = "/tanks";
   tanksRef: AngularFirestoreCollection<Tank>;
-  // angForm: FormGroup;
   submitted = false;  
   
   constructor(
-    // private fb: FormBuilder,
     private db : AngularFirestore,
   ) { 
     this.tanksRef = db.collection(this.dbPath);
-    // this.createForm();
+    
   }
-
-  // createForm(){
-  //   this.angForm = this.fb.group({
-  //     name: ['', Validators.required ],
-  //     address: ['', Validators.required ]
-  //     });
-  // }
 
   getAllTanks(): any {
     return this.tanksRef.snapshotChanges().pipe(

@@ -77,7 +77,7 @@
                     <textarea formControlName="description" cols="30" rows="10" class="form-control"
                       [ngClass]="{ 'is-invalid': submitted && f.description.errors }" [(ngModel)]="museums.description"></textarea>
                     <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                      <div *ngIf="f.description.errors.required">Le champ histoire est obligatoire</div>
+                      <div *ngIf="f.description.errors.required">Le champ description est obligatoire</div>
                       <div *ngIf="f.description.errors.maxlength">
                         Le champ description ne doit pas dépasser 500 caractères
                       </div>

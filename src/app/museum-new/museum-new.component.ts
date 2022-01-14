@@ -13,7 +13,6 @@ export class MuseumNewComponent implements OnInit {
   public museums!: Museum;
 
 
-  //angForm: FormGroup;
   form: FormGroup;
   submitted = false;
 
@@ -69,7 +68,6 @@ export class MuseumNewComponent implements OnInit {
       return;
     }
 
-    // console.log(JSON.stringify(this.form.value, null, 2));
     this.Museum.saveNewMuseum(this.museums).subscribe(() => {
       this.museums = new Museum();
       this.router.navigate(['/museums']);
